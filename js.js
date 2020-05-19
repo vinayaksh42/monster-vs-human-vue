@@ -18,8 +18,8 @@ new Vue({
 			this.att2 = -Math.floor(Math.random() * 35);
 			this.monster += this.att1;
 			this.human += this.att2;
-			this.events.push("You used a special attack of power "+ this.att1)
-			this.events.push("Monster used attacked you with power "+ this.att2)
+			this.events.unshift("You used a special attack of power "+ this.att1)
+			this.events.unshfit("Monster used attacked you with power "+ this.att2)
 			if(this.human<=0){
 				this.mvictory=true
 				this.game=!this.game
@@ -44,8 +44,8 @@ new Vue({
 			this.att2 = -Math.floor(Math.random() * 25);
 			this.monster += this.att1;
 			this.human += this.att2;
-			this.events.push("You used a normal attack of power "+ this.att1)
-			this.events.push("Monster used attacked you with power "+ this.att2)
+			this.events.unshift("You used a normal attack of power "+ this.att1)
+			this.events.unshift("Monster used attacked you with power "+ this.att2)
 			if(this.human<=0){
 				this.mvictory=true
 				this.game=!this.game
@@ -70,8 +70,8 @@ new Vue({
 			this.att2 = -Math.floor(Math.random() * 25);
 			this.human += this.att1;
 			this.human += this.att2;
-			this.events.push("You healed yourself by power "+ this.att1)
-			this.events.push("Monster used attacked you with power "+ this.att2)
+			this.events.unshift("You healed yourself by power "+ this.att1)
+			this.events.unshift("Monster used attacked you with power "+ this.att2)
 			if(this.human>100){
 				this.human=100;
 			}
