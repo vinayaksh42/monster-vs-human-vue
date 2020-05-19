@@ -15,7 +15,7 @@ new Vue({
 	methods: {
 		sattack: function(){
 			this.att1 = -Math.floor(Math.random() * 15);
-			this.att2 = -Math.floor(Math.random() * 25);
+			this.att2 = -Math.floor(Math.random() * 35);
 			this.monster += this.att1;
 			this.human += this.att2;
 			this.events.push("You used a special attack of power "+ this.att1)
@@ -41,7 +41,7 @@ new Vue({
 		},
 		attack: function(){
 			this.att1 = -Math.floor(Math.random() * 10);
-			this.att2 = -Math.floor(Math.random() * 15);
+			this.att2 = -Math.floor(Math.random() * 25);
 			this.monster += this.att1;
 			this.human += this.att2;
 			this.events.push("You used a normal attack of power "+ this.att1)
@@ -67,7 +67,7 @@ new Vue({
 		},
 		heal: function(){
 			this.att1 = +Math.floor(Math.random() * 12);
-			this.att2 = -Math.floor(Math.random() * 15);
+			this.att2 = -Math.floor(Math.random() * 25);
 			this.human += this.att1;
 			this.human += this.att2;
 			this.events.push("You healed yourself by power "+ this.att1)
